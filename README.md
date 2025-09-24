@@ -45,6 +45,23 @@ python manage.py runserver
 
 ---
 
+## How to Run and Test the APIs
+
+After setting up the project and running the server (`python manage.py runserver`), you can access and test the API endpoints as follows:
+
+### 1. Obtain JWT Token
+Use your username and password to get an access token:
+
+```bash
+curl -X POST http://127.0.0.1:8000/api/jwt/token/ \
+-H "Content-Type: application/json" \
+-d '{"username": "<your_username>", "password": "<your_password>"}'
+
+2. Use the Access Token to Authenticate
+Include the token in the Authorization header for all protected endpoints:
+-H "Authorization: Bearer <ACCESS_TOKEN>"
+---
+
 ## Running and Understanding Test Cases
 
 The project includes automated tests to ensure the API works correctly with JWT authentication, CRUD operations, and author permissions.
@@ -66,8 +83,6 @@ The project includes automated tests to ensure the API works correctly with JWT 
 - `authenticate(user)` sets the token in the `Authorization` header for all subsequent requests:
 ```python
 self.client.credentials(HTTP_AUTHORIZATION=f"Bearer {token}")
-
-
 
 How to Run Tests
 
