@@ -12,7 +12,7 @@ Blog API with JWT Authentication is a Django REST Framework backend that allows 
 - Only authors can update or delete their own posts  
 - Image upload for posts  
 - Search by title/content  
-- Pagination (5 posts per page)  
+- Pagination
 - Unit tests for authentication, CRUD, and permissions  
 
 ---
