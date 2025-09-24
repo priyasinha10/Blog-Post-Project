@@ -8,7 +8,7 @@ Blog API with JWT Authentication is a Django REST Framework backend that allows 
 
 ## Features
 - CRUD operations for blog posts (title, content, image, author, published date)  
-- JWT authentication with 1-day access tokens and 7-day refresh tokens  
+- JWT authentication with 1-day access tokens  
 - Only authors can update or delete their own posts  
 - Image upload for posts  
 - Search by title/content  
